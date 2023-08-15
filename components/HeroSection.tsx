@@ -29,17 +29,12 @@ const HeroSection = () => {
             working towards creating software that makes life easier and more
             meaningful.
           </p>
-          <Link
-            to="projects"
+          <a
+            href="mailto:tripathykhushi2002@gmail.com"
             className="text-neutral-100 font-semibold px-6 py-3 bg-purple-600 rounded shadow hover:bg-purple-700"
-            activeClass="active"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}
           >
-            Projects
-          </Link>
+            Contact Me
+          </a>
         </div>
       </div>
       <div className="flex flex-row items-center text-center justify-center ">
