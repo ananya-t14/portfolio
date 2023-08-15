@@ -12,7 +12,14 @@ const skills = [
   { skill: "Tailwind CSS" },
   { skill: "Git" },
   { skill: "GitHub" },
-  { skill: "Jupyter Notebooks" },
+  { skill: "Data Structures" },
+  { skill: "My SQL" },
+  { skill: "DynamoDB" },
+  { skill: "Postman" },
+  { skill: "APIs" },
+  { skill: "Node.js" },
+  { skill: "Express.js" },
+  { skill: "MongoDB" },
 ];
 
 const AboutSection = () => {
