@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 import { RiMoonFill, RiSunLine } from "react-icons/ri";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
-
+import { useRouter } from "next/router";
 interface NavItem {
   label: string;
   page: string;
@@ -60,10 +60,17 @@ export default function Navbar() {
             }`}
           >
             <div className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+              {pathname=="/"?<>
+              
               {NAV_ITEMS.map((item, idx) => {
                 return (
                   <Link
                     key={idx}
+                    // href={
+                    //   {
+                    //     pathname:item.page,
+                    //   }
+                    // }
                     to={item.page}
                     className={
                       "block lg:inline-block text-neutral-900  hover:text-neutral-500 cursor-pointer dark:text-neutral-100"
@@ -79,6 +86,36 @@ export default function Navbar() {
                   </Link>
                 );
               })}
+              <Link
+                to="/resume"
+                href={"/resume"}
+                className={
+                  "block lg:inline-block text-neutral-900  hover:text-neutral-500 cursor-pointer dark:text-neutral-100"
+                }
+                activeClass="active"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+                onClick={() => setNavbar(!navbar)}
+              >
+                Resume
+              </Link>
+              </>:( <Link
+                to="/"
+                href={"/"}
+                className={
+                  "block lg:inline-block text-neutral-900  hover:text-neutral-500 cursor-pointer dark:text-neutral-100"
+                }
+                activeClass="active"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+                onClick={() => setNavbar(!navbar)}
+              >
+                Home
+              </Link>)}
               {currentTheme === "dark" ? (
                 <button
                   onClick={() => setTheme("light")}

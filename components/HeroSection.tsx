@@ -35,6 +35,12 @@ const HeroSection = () => {
           >
             Contact Me
           </a>
+          <a
+            href="/resume"
+            className="transition-all hover:text-neutral-100 bg-neutral-100 ml-2 font-semibold px-6 py-3 text-purple-600 rounded shadow hover:bg-purple-700"
+          >
+            Resume
+          </a>
         </div>
       </div>
       <div className="flex flex-row items-center text-center justify-center ">

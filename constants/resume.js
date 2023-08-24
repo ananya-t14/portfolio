@@ -1,0 +1,1 @@
+export const link = "https://rs-bucket-s3.s3.ap-south-1.amazonaws.com/Ananya+Tripathy+Formal+Resume.pdf"
